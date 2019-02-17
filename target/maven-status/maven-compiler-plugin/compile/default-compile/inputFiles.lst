@@ -1,2 +1,6 @@
-D:\Java_Eclipse\slime\src\main\java\itmonopoly\ru\slime\Controller\AndroidController.java
-D:\Java_Eclipse\slime\src\main\java\itmonopoly\ru\slime\SlimeApplication.java
+D:\Java_Eclipse\SlimeBack\src\main\java\itmonopoly\ru\slime\SlimeApplication.java
+D:\Java_Eclipse\SlimeBack\src\main\java\itmonopoly\ru\slime\DB\SQLconnect.java
+D:\Java_Eclipse\SlimeBack\src\main\java\itmonopoly\ru\slime\Model\Activity.java
+D:\Java_Eclipse\SlimeBack\src\main\java\itmonopoly\ru\slime\Model\Manager.java
+D:\Java_Eclipse\SlimeBack\src\main\java\itmonopoly\ru\slime\Model\User.java
+D:\Java_Eclipse\SlimeBack\src\main\java\itmonopoly\ru\slime\Controller\AndroidController.java
