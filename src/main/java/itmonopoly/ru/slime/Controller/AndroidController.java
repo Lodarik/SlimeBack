@@ -1,20 +1,24 @@
 package itmonopoly.ru.slime.Controller;
 
+import java.sql.SQLException;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import itmonopoly.ru.slime.DB.SQLconnect;
+import itmonopoly.ru.slime.DB.Sqllite3;
 
 @RestController
-@RequestMapping("Android")
+
 public class AndroidController {
-	SQLconnect db = new SQLconnect();
 
 	@GetMapping
-	public String getWelcomeMessage() {
+	@RequestMapping("Android")
+	public String getWelcomeMessage() throws ClassNotFoundException, SQLException {
+		Sqllite3.Conn();
+		Sqllite3.WriteDB();
 
-		String welcomeMessage = "Hello!";
+		String welcomeMessage = "Database writed!";
+		Sqllite3.CloseDB();
 		return welcomeMessage;
 	}
 }
