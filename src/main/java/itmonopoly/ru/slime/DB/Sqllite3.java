@@ -17,7 +17,7 @@ public class Sqllite3 {
 	   {
 		   conn = null;
 		   Class.forName("org.sqlite.JDBC");
-		   conn = DriverManager.getConnection("jdbc:sqlite:src\\main\\resources\\DB\\slime.s3db");
+		   conn = DriverManager.getConnection("jdbc:sqlite:src\\main\\resources\\DB\\slime1.s3db");
 		   
 		   System.out.println("База Подключена!");
 	   }

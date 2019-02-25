@@ -2,6 +2,7 @@ package itmonopoly.ru.slime.Model;
 
 public class Ticket {
 
+	private String id;
     private String  textVievFirst;
     private String  textVievSecond;
     private String  calendar;
@@ -9,12 +10,13 @@ public class Ticket {
     private Boolean like;
 
     // Constructor that is used to create an instance of the Movie object
-    public Ticket(String textVievFirst, String textVievSecond, String calendar, String picturesName, Boolean like) {
+    public Ticket(String id ,String textVievFirst, String textVievSecond, String calendar, String picturesName, Boolean like) {
             this.textVievFirst = textVievFirst;
             this.textVievSecond = textVievSecond;
             this.calendar = calendar;
             this.picturesName = picturesName;
-            this.like = like;
+            this.like = false;
+            this.id = id;
     }
 
     public String getTextVievFirst() {
@@ -55,5 +57,9 @@ public class Ticket {
 
     public void setLike(Boolean like) {
             this.like = like;
+    }
+    
+    public void getId(String id) {
+    	this.id = id;
     }
 }
