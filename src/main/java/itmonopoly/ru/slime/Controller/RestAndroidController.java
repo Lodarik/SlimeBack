@@ -2,10 +2,8 @@ package itmonopoly.ru.slime.Controller;
 
 import java.util.ArrayList;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import itmonopoly.ru.slime.Model.Ticket;
@@ -21,12 +19,18 @@ public class RestAndroidController {
 	ArrayList<Ticket> li = new ArrayList<Ticket>();
    
 	
-	@RequestMapping(value = "RestTicket", method = RequestMethod.GET)
-	@ResponseBody
-	public ArrayList<Ticket> RestTicket(){
+//	@GetMapping({"RestTicket/full"})
+//	public ArrayList<Ticket> RestTicket(){
+//		li.add(tic1);
+//		li.add(tic2);
+//		return li;
+//	}
+	@GetMapping({"RestTicket/{id}"})
+	public Ticket RestTicket(@RequestParam String id){
+		int intid = Integer.parseInt(id);
 		li.add(tic1);
 		li.add(tic2);
-		return li;
+		return li.get(intid);
 	}
-	
+			
 }
